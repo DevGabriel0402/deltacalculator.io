@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calcular Delta</title>
+    <script src="delta.js"></script>
+    <link rel="stylesheet" href="delta.css" />
+    <link rel="icon" href="delta.png" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Calcular Delta</h1>
+      <h3>&Delta; = b<sup>2</sup> - 4 . (a . c)</h3>
+      <input
+        id="a"
+        type="text"
+        min="0"
+        max="100"
+        placeholder="Informe o valor de A"
+        onkeypress="permitirApenasNumeros(event)"
+      />
+      <input
+        id="b"
+        type="text"
+        min="0"
+        max="100"
+        placeholder="Informe o valor de B"
+        onkeypress="permitirApenasNumeros(event)"
+        required
+      />
+      <input
+        id="c"
+        type="text"
+        min="0"
+        max="100"
+        placeholder="Informe o valor de C"
+        onkeypress="permitirApenasNumeros(event)"
+        required
+      />
+      <div class="btn">
+        <button class="calcular" onclick="calcularDelta()">
+          Calcular o &Delta;
+        </button>
+        <button class="limpar" onclick="limpar()">Limpar</button>
+      </div>
+
+      <p></p>
+      <div id="resultadoDelta"></div>
+      <div id="dadosValido" class="validar"></div>
+    </div>
+  </body>
+</html>
